@@ -13,6 +13,12 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  css: [
+    {
+      src: '~/assets/main.scss',
+      lang: 'scss'
+    }
+  ],
   /*
   ** Customize the progress bar color
   */
@@ -31,11 +37,9 @@ module.exports = {
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/
-        }
-        ,{
-          test: /\.s[a|c]ss$/,
-          loader: 'vue-style-loader!css-loader!sass-loader'
         })
+        const vueLoader = config.module.rules.find((rule) => rule.loader === 'vue-loader')
+        vueLoader.options.loaders.sass = 'vue-style-loader!css-loader!sass-loader'
       }
     }
   }
