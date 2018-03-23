@@ -11,6 +11,7 @@
         a(href="https://github.com/nuxt/nuxt.js"
           target="_blank"
           class="button--grey") GitHub
+        nuxt-link(to="/login") login
         nuxt-link(to="/page1") Page1
         nuxt-link(to="/page2") Page2
         nuxt-link(to="/page3") Page3
