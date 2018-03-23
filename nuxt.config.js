@@ -19,6 +19,9 @@ module.exports = {
       lang: 'scss'
     }
   ],
+  router: {
+    middleware: 'auth'
+  },
   /*
   ** Customize the progress bar color
   */
